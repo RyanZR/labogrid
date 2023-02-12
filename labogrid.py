@@ -118,10 +118,10 @@ def labogrid(data: str, ext: str, inputType: str, scale: float):
     bxsize = [length_WHD(ranges[0], scale), length_WHD(ranges[1], scale), length_WHD(ranges[2], scale)]
     print(f"labodock.py")
     if inputType in "L":
-        print(f"╰─○ Gridbox Size :  W {bxsize[0]}  H {bxsize[1]}  D {bxsize[2]}")
+        print(f"╰─○ Gridbox Size  :  W {bxsize[0]}  H {bxsize[1]}  D {bxsize[2]}")
     if inputType == "E":
-        print(f"╰─○ Ligand Center:  X {center[0]}  Y {center[1]}  Z {center[2]}")
-        print(f"    Gridbox Size :  W {bxsize[0]}  H {bxsize[1]}  D {bxsize[2]}")
+        print(f"╰─○ Gridbox Center:  X {center[0]}  Y {center[1]}  Z {center[2]}")
+        print(f"    Gridbox Size  :  W {bxsize[0]}  H {bxsize[1]}  D {bxsize[2]}")
 
 def main():
     try:
