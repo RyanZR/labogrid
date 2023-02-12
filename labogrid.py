@@ -161,19 +161,12 @@ def main():
         if opt in ("-a", "--about"):
             about()
             sys.exit()
-            
 
-    if INPUT_TYPE == "L":
-        file_handler(LIG_file, INPUT_TYPE)
-        EXT = os.path.splitext(LIG_file)[-1]
-        DATA = open(LIG_file, "r").readlines()
-        labogrid(DATA, EXT, INPUT_TYPE, SCALE)
+    TARGET = LIG_file if INPUT_TYPE == "L" else EXP_file
+    file_handler(TARGET, INPUT_TYPE)
+    EXT = os.path.splitext(TARGET)[-1]
+    DATA = open(TARGET, "r").readlines()
+    labogrid(DATA, EXT, INPUT_TYPE, SCALE)
     
-    if INPUT_TYPE == "E":
-        file_handler(EXP_file, INPUT_TYPE)
-        EXT = os.path.splitext(EXP_file)[-1]
-        DATA = open(EXP_file, "r").readlines()
-        labogrid(DATA, EXT, INPUT_TYPE, SCALE)
-
 if __name__ == "__main__":
     main()
